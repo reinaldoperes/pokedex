@@ -39,6 +39,11 @@ const renderPokemon = async pokemon => {
   pokemonInput.value = '';
 
   searchPokemon = id;
+
+  const audio = new Audio(`./cries/${id}.ogg`);
+  audio.volume = 0.1;
+  audio.play();
+
   } else
     pokemonName.innerHTML = 'Not found :(';
 }
